@@ -1,8 +1,8 @@
 var DATA = require("./data.json");
 
 function get(countryCode, language) {
-  if (DATA.countryNames[countryCode] != null) {
-    return DATA.countryNames[countryCode];
+  if (DATA.countryNames[language][countryCode] != null) {
+    return DATA.countryNames[language][countryCode];
   }
 
   var key = DATA.country[countryCode];
