@@ -35,7 +35,7 @@ locales.forEach((locale) => {
   var cldr = new Cldr(locale);
 
   // Grab language code (minimal)
-  var lang = cldr.attributes.minLanguageId.split("-")[0];
+  var lang = cldr.attributes.bundle;
   if (resultNames[lang] == null) {
     resultNames[lang] = cldr.main("localeDisplayNames/territories");
   }
